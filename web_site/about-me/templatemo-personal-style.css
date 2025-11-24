@@ -328,7 +328,7 @@ About me
             display: flex;
             align-items: center;
             justify-content: left;
-            background: url("images/Troll.jpg") no-repeat center center/cover;
+            background: url("images/background.jpg") no-repeat center center/cover;
             position: relative;
             overflow: hidden;
         }
@@ -1204,5 +1204,6 @@ About me
                 padding: 0 1rem;
             }
         }
+
 
 
