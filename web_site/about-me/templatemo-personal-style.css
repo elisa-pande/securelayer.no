@@ -324,7 +324,7 @@ About me
 
         /* Hero Section */
         .hero {
-            height: 80vh;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: left;
