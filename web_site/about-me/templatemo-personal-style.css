@@ -330,7 +330,7 @@ https://templatemo.com/tm-593-personal-shape
             display: flex;
             align-items: center;
             justify-content: left;
-            background: url("images/background.jpg") no-repeat center center/cover;
+            background: url("/web_site/about-me/images/background.jpg") no-repeat center center/cover;
             position: relative;
             overflow: hidden;
         }
@@ -1207,6 +1207,7 @@ https://templatemo.com/tm-593-personal-shape
             }
 
         }
+
 
 
 
