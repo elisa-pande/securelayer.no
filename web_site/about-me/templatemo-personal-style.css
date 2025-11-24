@@ -335,7 +335,7 @@ https://templatemo.com/tm-593-personal-shape
             overflow: hidden;
         }
 
-      /*  .hero::before {
+       .hero::before {
             content: '';
             position: absolute;
             top: 0;
@@ -346,7 +346,7 @@ https://templatemo.com/tm-593-personal-shape
             animation: float 25s ease-in-out infinite;
             opacity: 0.7;
         }
-*/
+
         .hero::after {
             content: '';
             position: absolute;
@@ -1207,6 +1207,7 @@ https://templatemo.com/tm-593-personal-shape
             }
 
         }
+
 
 
 
