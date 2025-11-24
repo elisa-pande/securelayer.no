@@ -1,8 +1,6 @@
 /*
 
-TemplateMo 593 personal shape
-
-https://templatemo.com/tm-593-personal-shape
+About me
 
 */
 
@@ -335,7 +333,7 @@ https://templatemo.com/tm-593-personal-shape
             overflow: hidden;
         }
 
-       .hero::before {
+        .hero::before {
             content: '';
             position: absolute;
             top: 0;
@@ -1205,11 +1203,4 @@ https://templatemo.com/tm-593-personal-shape
             .container {
                 padding: 0 1rem;
             }
-
         }
-
-
-
-
-
-
