@@ -1546,17 +1546,17 @@ a.info-item {
 	.nav-menu {
 		position: fixed;
 		left: -100%;
-		top: 0;
+		top: 85;
 		display: flex;
 		flex-direction: column;
 		background: rgba(18, 18, 18, 0.98);
 		width: 100%;
 		text-align: center;
-		transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		transition: 0.3s;
 		padding: 40px 0;
 		border-bottom: 1px solid var(--metal-dark);
 		gap: 0;
-		z-index: 999;
+		
 	}
 
 	.nav-menu li {
