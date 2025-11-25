@@ -44,7 +44,7 @@ body {
 /* Carbon Fiber Background Pattern */
 body::before {
 	content: '';
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -169,7 +169,7 @@ body::after {
 
 /* Navigation Header */
 .header {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	width: 100%;
 	background: linear-gradient(180deg,
@@ -1677,6 +1677,7 @@ a.info-item {
 	}
 
 }
+
 
 
 
