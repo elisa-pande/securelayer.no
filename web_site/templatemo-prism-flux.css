@@ -169,7 +169,7 @@ body::after {
 
 /* Navigation Header */
 .header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	width: 100%;
 	background: linear-gradient(180deg,
@@ -1677,6 +1677,7 @@ a.info-item {
 	}
 
 }
+
 
 
 
