@@ -445,21 +445,52 @@
             observer.observe(statsSection);
         }
 
-        // Form submission
+        // Form submission (Formspree AJAX)
         const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Show success message
-            alert(`Thank you ${data.name}! Your message has been transmitted successfully. We'll respond within 24 hours.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
+        
+        if (contactForm) {
+          contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent default form submit
+        
+            const endpoint = contactForm.action; // https://formspree.io/f/xpwwewez
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.textContent : '';
+        
+            try {
+              if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+              }
+        
+              const formData = new FormData(contactForm);
+        
+              const response = await fetch(endpoint, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                  'Accept': 'application/json'
+                }
+              });
+        
+              if (!response.ok) {
+                throw new Error('Form submission failed');
+              }
+        
+              alert("Thank you! Your message has been transmitted successfully. We'll respond within 24 hours.");
+              contactForm.reset();
+        
+            } catch (error) {
+              console.error(error);
+              alert('Failed to send message. Please try again or email contact@securelayer.no');
+            } finally {
+              if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText || 'Transmit Message';
+              }
+            }
+          });
+        }
+
 
         // Loading screen
         window.addEventListener('load', () => {
@@ -476,4 +507,5 @@
             if (parallax) {
                 parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
+
         });
